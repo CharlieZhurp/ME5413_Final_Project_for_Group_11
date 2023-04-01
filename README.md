@@ -42,6 +42,7 @@ https://github.com/gisbi-kim/SC-A-LOAM
     jackal_navigation
     velodyne_simulator
     teleop_twist_keyboard
+    other dependecies about Aloam, SC-Aloam, Cartographer
 
 And this gazebo_model repositiory  
 
