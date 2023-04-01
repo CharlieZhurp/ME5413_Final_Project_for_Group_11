@@ -1,4 +1,5 @@
 # ME5413_FINAL_PROJECT for Group 11  
+
 Authors: CHEN JUNJIE, THONG CHEE WAI,BENJAMIN, YI ZHENG, ZHU RUIPENG
 
 ## Reference:  
@@ -46,45 +47,51 @@ And this gazebo_model repositiory
 
 ## Installation  
 
-cd
-git clone
-cd ME5413_Final_Project  
+cd  
+git clone  
+cd ME5413_Final_Project   
 
 ### This is the final project for Group 11, containing three sub-workspace.
 #### 1. Cartographer_ws
-if you want to build in your workspace, you should delete ./Cartographer_ws/build_isolated, ./Cartographer_ws/devel_isolated and ./Cartographer_ws/install_isolated first.  
-Build
+if you want to build in your workspace, you should delete ./Cartographer_ws/build_isolated, ./Cartographer_ws/devel_isolated and ./Cartographer_ws/install_isolated first.    
+
+#Build
 catkin_make_isolated --install --use-ninja
-Source
+
+#Source
+
 source install_isolated/setup.bash
+
 #Start Cartographer
+
 roslaunch cartographer_ros demo_my_robot.launch bag_filename:=/path/to/your_bag.bag
 
 #### 2.ME5413_Final_Project
-if you want to build in your workspace, you should delete ./ME5413_Final_Project/build, ./ME5413_Final_Project/devel first.
-Build
-catkin_make
-Source
-source devel/setup.bash
-Launch Gazebo World together with our robot
-roslaunch me5413_world world.launch
-Only launch the robot keyboard teleop control
-roslaunch me5413_world manual.launch
-Launch GMapping
-roslaunch me5413_world mapping.launch
-Save the map as `my_map` in the `maps/` folder
-roscd me5413_world/maps/
-rosrun map_server map_saver -f my_map map:=/map
-Load a map and launch localizer
-roslaunch me5413_world navigation_teb.launch
+if you want to build in your workspace, you should delete ./ME5413_Final_Project/build, ./ME5413_Final_Project/devel first.  
+
+#Build  
+catkin_make  
+#Source  
+source devel/setup.bash  
+#Launch Gazebo World together with our robot  
+roslaunch me5413_world world.launch  
+#Only launch the robot keyboard teleop control  
+roslaunch me5413_world manual.launch  
+#Launch GMapping  
+roslaunch me5413_world mapping.launch  
+#Save the map as `my_map` in the `maps/` folder  
+roscd me5413_world/maps/  
+rosrun map_server map_saver -f my_map map:=/map  
+#Load a map and launch localizer  
+roslaunch me5413_world navigation_teb.launch  
 
 #### 3.sc_aloam_ws
-if you want to build in your workspace, you should delete ./sc_aloam_ws/build, ./sc_aloam_ws/devel first.
-Build
-catkin_make
-Source
-source devel/setup.bash
-Start SC-ALOAM
-roslaunch aloam_velodyne aloam_mulran.launch 
+if you want to build in your workspace, you should delete ./sc_aloam_ws/build, ./sc_aloam_ws/devel first.  
+#Build  
+catkin_make  
+#Source
+source devel/setup.bash  
+#Start SC-ALOAM  
+roslaunch aloam_velodyne aloam_mulran.launch   
 
 
