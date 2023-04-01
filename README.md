@@ -45,47 +45,47 @@ https://github.com/gisbi-kim/SC-A-LOAM
 
 And this gazebo_model repositiory  
 
-## Installation:  
+## Installation   
 
-cd  
-git clone  
-cd ME5413_Final_Project   
+    cd  
+    git clone  
+    cd ME5413_Final_Project   
 
 ### This is the final project for Group 11, containing three sub-workspace.
 #### 1. Cartographer_ws:
 
-#Build
-catkin_make_isolated --install --use-ninja
-#Source
-source install_isolated/setup.bash
-#Start Cartographer
-roslaunch cartographer_ros demo_my_robot.launch bag_filename:=/path/to/your_bag.bag
+    #Build
+    catkin_make_isolated --install --use-ninja
+    #Source
+    source install_isolated/setup.bash
+    #Start Cartographer
+    roslaunch cartographer_ros demo_my_robot.launch bag_filename:=/path/to/your_bag.bag
 
 #### 2.ME5413_Final_Project:
  
-#Build  
-catkin_make  
-#Source  
-source devel/setup.bash  
-#Launch Gazebo World together with our robot  
-roslaunch me5413_world world.launch  
-#Only launch the robot keyboard teleop control  
-roslaunch me5413_world manual.launch  
-#Launch GMapping  
-roslaunch me5413_world mapping.launch  
-#Save the map as `my_map` in the `maps/` folder  
-roscd me5413_world/maps/  
-rosrun map_server map_saver -f my_map map:=/map  
-#Load a map and launch localizer  
-roslaunch me5413_world navigation_teb.launch  
+    #Build  
+    catkin_make  
+    #Source  
+    source devel/setup.bash  
+    #Launch Gazebo World together with our robot  
+    roslaunch me5413_world world.launch  
+    #Only launch the robot keyboard teleop control  
+    roslaunch me5413_world manual.launch  
+    #Launch GMapping  
+    roslaunch me5413_world mapping.launch  
+    #Save the map as `my_map` in the `maps/` folder  
+    roscd me5413_world/maps/  
+    rosrun map_server map_saver -f my_map map:=/map  
+    #Load a map and launch localizer  
+    roslaunch me5413_world navigation_teb.launch  
 
 #### 3.sc_aloam_ws
 
-#Build  
-catkin_make  
-#Source
-source devel/setup.bash  
-#Start SC-ALOAM  
-roslaunch aloam_velodyne aloam_mulran.launch   
+    #Build  
+    catkin_make  
+    #Source
+    source devel/setup.bash  
+    #Start SC-ALOAM  
+    roslaunch aloam_velodyne aloam_mulran.launch   
 
 
