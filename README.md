@@ -96,6 +96,10 @@ And this gazebo_model repositiory
     #Start SC-ALOAM  
     roslaunch aloam_velodyne aloam_mulran.launch   
 
+##Evaluation
+Verify your SLAM accuracy by comparing your odometry with the published /gazebo/ground_truth/state topic (nav_msgs::Odometry), which contains the gournd truth odometry of the robot.  
+You can use tools like EVO to quantitatively evaluate the performance of the SLAM algorithm.  
+    evo_ape bag yourbag.bag /aft_mapped_to_init /gazebo/groundtruth/state
 
    
 
