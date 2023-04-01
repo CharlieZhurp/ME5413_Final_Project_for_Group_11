@@ -1,2 +1,0 @@
-SC-A-LOAM
--DCATKIN_DEVEL_PREFIX=/home/zhu/ME5413_Final_Project/sc_aloam_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zhu/ME5413_Final_Project/sc_aloam_ws/install -G Unix Makefiles
