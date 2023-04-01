@@ -4,12 +4,17 @@ Authors: CHEN JUNJIE, THONG CHEE WAI,BENJAMIN, YI ZHENG, ZHU RUIPENG
 
 ## Reference:  
 
-Cartographer Official documents:  
+Cartographer Official Documents:  
 https://google-cartographer-ros.readthedocs.io/en/latest/index.html  
-ME5413_Final_Project Official documents:  
+ME5413_Final_Project Official Documents:  
 https://github.com/NUS-Advanced-Robotics-Centre/ME5413_Final_Project  
 SC-Aloam Official documents:  
 https://github.com/gisbi-kim/SC-A-LOAM  
+Aloam Official Documents:   
+https://github.com/HKUST-Aerial-Robotics/A-LOAM    
+Aloam for Noetic Documents:
+https://github.com/nuslde/aloam_lidar_odom_result_generate
+
 
 ##### You can also install and build in your workspace according to official documents.
 
