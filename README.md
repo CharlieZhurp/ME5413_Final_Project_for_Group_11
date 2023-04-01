@@ -65,17 +65,23 @@ And this gazebo_model repositiory
  
     #Build  
     catkin_make  
+    
     #Source  
     source devel/setup.bash  
+    
     #Launch Gazebo World together with our robot  
     roslaunch me5413_world world.launch  
+    
     #Only launch the robot keyboard teleop control  
     roslaunch me5413_world manual.launch  
+    
     #Launch GMapping  
     roslaunch me5413_world mapping.launch  
+    
     #Save the map as `my_map` in the `maps/` folder  
-    roscd me5413_world/maps/  
+    roscd me5413_world/maps/    
     rosrun map_server map_saver -f my_map map:=/map  
+    
     #Load a map and launch localizer  
     roslaunch me5413_world navigation_teb.launch  
 
@@ -83,8 +89,10 @@ And this gazebo_model repositiory
 
     #Build  
     catkin_make  
+    
     #Source
     source devel/setup.bash  
+    
     #Start SC-ALOAM  
     roslaunch aloam_velodyne aloam_mulran.launch   
 
