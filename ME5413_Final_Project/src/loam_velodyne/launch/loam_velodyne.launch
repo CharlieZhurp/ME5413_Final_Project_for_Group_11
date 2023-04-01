@@ -1,0 +1,35 @@
+<launch>
+
+  <arg name="rviz" default="true" />
+  <arg name="max_scan_range" default="80.0"/>
+  <arg name="min_scan_range" default="1.0"/>
+  <arg name="scan_period" default="0.1"/>
+  <arg name="imu_topic" default="/imu/data"/>
+  <arg name="odom_topic" default="/odom"/>
+  <arg name="lidar_topic" default="/velodyne_points"/>
+  <arg name="mapping_output_topic" default="/mapping_output"/>
+  <arg name="mapping_resolution" default="0.2"/>
+
+  <node pkg="loam_velodyne" type="multiScanRegistration" name="multiScanRegistration" output="screen">
+    <param name="lidar" value="VLP-16" /> <!-- options: VLP-16  HDL-32  HDL-64E -->
+    <param name="scanPeriod" value="$(arg scanPeriod)" />
+
+    <remap from="/multi_scan_points" to="/velodyne_points" />
+  </node>
+
+  <node pkg="loam_velodyne" type="laserOdometry" name="laserOdometry" output="screen" respawn="true">
+    <param name="scanPeriod" value="$(arg scanPeriod)" />
+  </node>
+
+  <node pkg="loam_velodyne" type="laserMapping" name="laserMapping" output="screen">
+    <param name="scanPeriod" value="$(arg scanPeriod)" />
+  </node>
+
+  <node pkg="loam_velodyne" type="transformMaintenance" name="transformMaintenance" output="screen">
+  </node>
+
+  <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find loam_velodyne)/rviz_cfg/loam_velodyne.rviz" />
+  </group>
+
+</launch>
