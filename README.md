@@ -61,7 +61,9 @@ And this gazebo_model repositiory
     #Start Cartographer
     roslaunch cartographer_ros demo_my_robot.launch bag_filename:=/path/to/your_bag.bag
 
-#### 2.ME5413_Final_Project:
+#### 2.ME5413_Final_Project:    
+If you want to use gpu acceleration, you need to install Velodyne simulator to ./src. Then you need to adjust "gpu=true" in ./src/master/velodyne_description/urdf/VLP-16.urdf.xacro.    
+https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/  
  
     #Build  
     catkin_make  
