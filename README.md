@@ -1,7 +1,8 @@
-#ME5413_FINAL_PROJECT for Group 11  
+# ME5413_FINAL_PROJECT for Group 11  
 Authors: CHEN JUNJIE, THONG CHEE WAI,BENJAMIN, YI ZHENG, ZHU RUIPENG
 
-##Reference:  
+## Reference:  
+
 Cartographer Official documents:  
 https://google-cartographer-ros.readthedocs.io/en/latest/index.html  
 ME5413_Final_Project Official documents:  
@@ -9,18 +10,18 @@ https://github.com/NUS-Advanced-Robotics-Centre/ME5413_Final_Project
 SC-Aloam Official documents:  
 https://github.com/gisbi-kim/SC-A-LOAM  
 
-#####You can also install and build in your workspace according to official documents.
+##### You can also install and build in your workspace according to official documents.
 
-##Dependencies
+## Dependencies
 
-###System Requirements:
+### System Requirements:
 
     Ubuntu 20.04 (18.04 not yet tested)
     ROS Noetic (Melodic not yet tested)
     C++11 and above
     CMake: 3.0.2 and above
     
-###This repo depends on the following standard ROS pkgs:
+### This repo depends on the following standard ROS pkgs:
 
     roscpp
     rospy
@@ -43,14 +44,14 @@ https://github.com/gisbi-kim/SC-A-LOAM
 
 And this gazebo_model repositiory  
 
-##Installation  
+## Installation  
 
 cd
 git clone
 cd ME5413_Final_Project  
 
-###This is the final project for Group 11, containing three sub-workspace.
-####1. Cartographer_ws
+### This is the final project for Group 11, containing three sub-workspace.
+#### 1. Cartographer_ws
 if you want to build in your workspace, you should delete ./Cartographer_ws/build_isolated, ./Cartographer_ws/devel_isolated and ./Cartographer_ws/install_isolated first.  
 Build
 catkin_make_isolated --install --use-ninja
@@ -59,7 +60,7 @@ source install_isolated/setup.bash
 #Start Cartographer
 roslaunch cartographer_ros demo_my_robot.launch bag_filename:=/path/to/your_bag.bag
 
-####2.ME5413_Final_Project
+#### 2.ME5413_Final_Project
 if you want to build in your workspace, you should delete ./ME5413_Final_Project/build, ./ME5413_Final_Project/devel first.
 Build
 catkin_make
@@ -77,7 +78,7 @@ rosrun map_server map_saver -f my_map map:=/map
 Load a map and launch localizer
 roslaunch me5413_world navigation_teb.launch
 
-####3.sc_aloam_ws
+#### 3.sc_aloam_ws
 if you want to build in your workspace, you should delete ./sc_aloam_ws/build, ./sc_aloam_ws/devel first.
 Build
 catkin_make
