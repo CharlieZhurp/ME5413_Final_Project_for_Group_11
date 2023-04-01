@@ -49,7 +49,7 @@ And this gazebo_model repositiory
 
     cd  
     git clone  
-    cd ME5413_Final_Project   
+    cd ME5413_Final_Project_for_Group_11   
 
 ### This is the final project for Group 11, containing three sub-workspace.
 #### 1. Cartographer_ws:
@@ -96,4 +96,6 @@ And this gazebo_model repositiory
     #Start SC-ALOAM  
     roslaunch aloam_velodyne aloam_mulran.launch   
 
+
+   
 
